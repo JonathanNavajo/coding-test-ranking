@@ -5,3 +5,9 @@ target/
 
 .project
 .classpath
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr

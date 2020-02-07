@@ -2,6 +2,7 @@ package com.idealista.application.entity;
 
 import java.util.List;
 
+
 public class PublicAd {
 
     private Integer id;
@@ -10,6 +11,18 @@ public class PublicAd {
     private List<String> pictureUrls;
     private Integer houseSize;
     private Integer gardenSize;
+
+    public PublicAd() {
+    }
+
+    public PublicAd(Integer id, String typology, String description, List<String> pictureUrls, Integer houseSize, Integer gardenSize) {
+        this.id = id;
+        this.typology = typology;
+        this.description = description;
+        this.pictureUrls = pictureUrls;
+        this.houseSize = houseSize;
+        this.gardenSize = gardenSize;
+    }
 
     public Integer getId() {
         return id;

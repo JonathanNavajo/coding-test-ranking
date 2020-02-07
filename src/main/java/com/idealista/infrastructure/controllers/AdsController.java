@@ -1,9 +1,11 @@
-package com.idealista.infrastructure.api;
+package com.idealista.infrastructure.controllers;
 
-import java.util.List;
-
+import com.idealista.application.entity.PublicAd;
+import com.idealista.application.entity.QualityAd;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 public class AdsController {

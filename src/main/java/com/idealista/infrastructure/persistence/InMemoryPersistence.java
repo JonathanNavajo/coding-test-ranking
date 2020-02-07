@@ -1,5 +1,7 @@
 package com.idealista.infrastructure.persistence;
 
+import com.idealista.application.entity.AdVO;
+import com.idealista.application.entity.PictureVO;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -35,5 +37,4 @@ public class InMemoryPersistence {
         pictures.add(new PictureVO(8, "http://www.idealista.com/pictures/8", "HD"));
     }
 
-    //TODO crea los métodos que necesites
 }

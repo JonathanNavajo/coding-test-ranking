@@ -1,4 +1,4 @@
-package com.idealista.infrastructure.api;
+package com.idealista.application.entity;
 
 import java.util.List;
 

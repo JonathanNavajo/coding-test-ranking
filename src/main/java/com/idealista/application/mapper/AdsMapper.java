@@ -21,8 +21,8 @@ public class AdsMapper {
     }
 
     private static List<String> mapPicturesIntegerToString(List<Integer> pictures, List<PictureVO> pictureVOS) {
-        return pictures.stream().map(item -> {
-            return pictureVOS.stream().filter(pictureVO -> pictureVO.getId().equals(item)).map(PictureVO::getUrl).findFirst().orElse(null);
-        }).collect(Collectors.toList());
+        return pictures.stream()
+                .map(item -> pictureVOS.stream().filter(pictureVO -> pictureVO.getId().equals(item))
+                        .map(PictureVO::getUrl).findFirst().orElse(null)).collect(Collectors.toList());
     }
 }

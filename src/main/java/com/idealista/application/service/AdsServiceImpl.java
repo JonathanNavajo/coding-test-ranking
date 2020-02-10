@@ -24,6 +24,11 @@ public class AdsServiceImpl implements IAdsService {
     @Value("${keyWords}")
     private List<String> keyWords;
 
+    /**
+     * Method for ordering relevant ads
+     * @return relevant ad list
+     */
+
     @Override
     public List<PublicAd> findPublicAds() {
 
@@ -37,6 +42,11 @@ public class AdsServiceImpl implements IAdsService {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * Method for show irrelevant ads
+     * @return irrelevant ad list
+     */
+
     @Override
     public List<QualityAd> findQualityAds() {
 
@@ -46,6 +56,11 @@ public class AdsServiceImpl implements IAdsService {
                 .map(item -> AdsMapper.mapAdVOToQualityAd(item, inMemoryPersistence.getPictures()))
                 .collect(Collectors.toList());
     }
+
+    /**
+     * Calculate score for all ads
+     * @return ad list with score
+     */
 
     @Override
     public List<AdVO> calculateScore() {

@@ -11,13 +11,27 @@ import java.util.stream.Collectors;
 public class AdsMapper {
 
     public static PublicAd mapAdVOToPublicAd(AdVO adVO, List<PictureVO> pictureVOS) {
-        return new PublicAd(adVO.getId(), adVO.getTypology(), adVO.getDescription(), mapPicturesIntegerToString(adVO.getPictures(), pictureVOS)
-                , adVO.getHouseSize(), adVO.getGardenSize());
+        return PublicAd.builder()
+                .id(adVO.getId())
+                .typology(adVO.getTypology())
+                .description(adVO.getDescription())
+                .pictureUrls(mapPicturesIntegerToString(adVO.getPictures(), pictureVOS))
+                .houseSize(adVO.getHouseSize())
+                .gardenSize(adVO.getGardenSize())
+                .build();
     }
 
     public static QualityAd mapAdVOToQualityAd(AdVO adVO, List<PictureVO> pictureVOS) {
-        return new QualityAd(adVO.getId(), adVO.getTypology(), adVO.getDescription(), mapPicturesIntegerToString(adVO.getPictures(), pictureVOS)
-                , adVO.getHouseSize(), adVO.getGardenSize(), adVO.getScore(), adVO.getIrrelevantSince());
+        return QualityAd.builder()
+                .id(adVO.getId())
+                .typology(adVO.getTypology())
+                .description(adVO.getDescription())
+                .pictureUrls(mapPicturesIntegerToString(adVO.getPictures(), pictureVOS))
+                .houseSize(adVO.getHouseSize())
+                .gardenSize(adVO.getGardenSize())
+                .score(adVO.getScore())
+                .irrelevantSince(adVO.getIrrelevantSince())
+                .build();
     }
 
     private static List<String> mapPicturesIntegerToString(List<Integer> pictures, List<PictureVO> pictureVOS) {

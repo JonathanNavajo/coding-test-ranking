@@ -12,6 +12,22 @@ import java.util.List;
 @Repository
 public class InMemoryPersistence {
 
+    public List<AdVO> getAds() {
+        return ads;
+    }
+
+    public void setAds(List<AdVO> ads) {
+        this.ads = ads;
+    }
+
+    public List<PictureVO> getPictures() {
+        return pictures;
+    }
+
+    public void setPictures(List<PictureVO> pictures) {
+        this.pictures = pictures;
+    }
+
     private List<AdVO> ads;
     private List<PictureVO> pictures;
 

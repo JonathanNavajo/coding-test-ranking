@@ -2,6 +2,10 @@ package com.idealista.infrastructure.persistence;
 
 import com.idealista.application.entity.AdVO;
 import com.idealista.application.entity.PictureVO;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -10,23 +14,8 @@ import java.util.Collections;
 import java.util.List;
 
 @Repository
+@Data
 public class InMemoryPersistence {
-
-    public List<AdVO> getAds() {
-        return ads;
-    }
-
-    public void setAds(List<AdVO> ads) {
-        this.ads = ads;
-    }
-
-    public List<PictureVO> getPictures() {
-        return pictures;
-    }
-
-    public void setPictures(List<PictureVO> pictures) {
-        this.pictures = pictures;
-    }
 
     private List<AdVO> ads;
     private List<PictureVO> pictures;

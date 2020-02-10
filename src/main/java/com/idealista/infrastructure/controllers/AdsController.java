@@ -20,19 +20,16 @@ public class AdsController {
 
     @GetMapping("/qualityAds")
     public ResponseEntity<List<QualityAd>> qualityListing() {
-        //TODO rellena el cuerpo del método
         return new ResponseEntity<>(adsService.findQualityAds(), HttpStatus.OK);
     }
 
     @GetMapping("/publicAds")
     public ResponseEntity<List<PublicAd>> publicListing() {
-        //TODO rellena el cuerpo del método
         return new ResponseEntity<>(adsService.findPublicAds(), HttpStatus.OK);
     }
 
     @GetMapping("/scoreAds")
     public ResponseEntity<List<AdVO>> calculateScore() {
-        //TODO rellena el cuerpo del método
         return new ResponseEntity<>(adsService.calculateScore(), HttpStatus.OK);
     }
 }
